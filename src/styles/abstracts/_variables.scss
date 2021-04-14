@@ -1,5 +1,106 @@
-$font-size: 1rem;
-$font-family: 'Inter', sans-serif;
-$background-color: #121212;
-$font-color: #dae0e0;
-$page-width: 650px;
+/** ****************************************************************
+    CSS Variables
+    Font rules are setup in base.scss for all major
+    elements using CSS variables.
+    When there's need to override a font rule, there's no need to
+    set again the rules, but it's best to just set a new value for
+    a CSS variable for a font rule.
+    **************************************************************** */
+@import '../utils/mixins';
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #2d2926;
+  --color-pale-grey: #f8f7f5;
+  --color-light-grey: #d8d1c9;
+  --color-dark-grey: #777779;
+  --color-primary: #2d2926;
+  --color-brand: #1cabe2;
+  --color-dark-blue: #374ea2;
+  --color-yellow: #ffc20e;
+  --color-orange: #f26a21;
+  --color-dark-black: #151515;
+  --color-dark-grey-opacity-02: rgba(216, 209, 201, 0.2);
+  --color-dark-grey-opacity-05: rgba(216, 209, 201, 0.5);
+  --color-white-opacity-02: rgba(255, 255, 255, 0.2);
+  --color-white-opacity-05: rgba(255, 255, 255, 0.5);
+  --color-white-opacity-06: rgba(255, 255, 255, 0.6);
+  --color-black-opacity-02: rgba(45, 41, 38, 02);
+  --color-black-opacity-05: rgba(45, 41, 38, 0.5);
+  --color-black-opacity-06: rgba(45, 41, 38, 0.6);
+  --color-black-opacity-09: rgba(45, 41, 38, 0.9);
+  --color-light-grey-opacity-02: #f8f7f5;
+  --color-light-grey-opacity-05: rgba(216, 209, 201, 0.5);
+  --color-blue-opacity-02: rgba(28, 171, 226, 0.2);
+  --color-brand-opacity-02: rgba(28, 171, 226, 0.2);
+
+  /*focusstate*/
+  --focus-outline: none;
+  --focus-box-shadow: none;
+
+  --text-base-size: 1.6rem;
+
+  --text-weight: 400;
+  --text-weight-strong: 600;
+  --heading-weight: 500;
+  --cta-weight: 700;
+  --body-font-weight: var(--text-weight);
+
+  --font-style-italic: italic;
+
+  --font-family-sans: 'IBM Plex Sans', sans-serif;
+  --font-family-serif: 'IBM Plex Serif', serif;
+
+  --heading-font-family: var(--font-family-serif);
+  --body-font-family: var(--font-family-sans);
+
+  --body-font-color: var(--color-primary);
+  --body-background-color: var(--color-white);
+
+  // Spacing
+  --space-unit: 0.8rem;
+
+  --space-size-0-5: calc(0.5 * var(--space-unit));
+  --space-size-1: calc(1 * var(--space-unit));
+  --space-size-2: calc(2 * var(--space-unit));
+  --space-size-3: calc(3 * var(--space-unit));
+  --space-size-4: calc(4 * var(--space-unit));
+  --space-size-5: calc(5 * var(--space-unit));
+  --space-size-6: calc(6 * var(--space-unit));
+  --space-size-7: calc(7 * var(--space-unit));
+  --space-size-8: calc(8 * var(--space-unit));
+  --space-size-9: calc(9 * var(--space-unit));
+  --space-size-10: calc(10 * var(--space-unit));
+  --space-size-11: calc(11 * var(--space-unit));
+  --space-size-12: calc(12 * var(--space-unit));
+  --space-size-15: calc(15 * var(--space-unit));
+
+  --border-primary-light-grey: 0.1rem solid var(--color-light-grey);
+  --border-numbers--brand: 0.2rem solid var(--color-brand);
+
+  --button-transition-hover: all 0.3s cubic-bezier(0.34, 0.01, 0.26, 0.99);
+  --global-transition: all 0.3s cubic-bezier(0.34, 0.01, 0.26, 0.99);
+  --cubic-bezier: cubic-bezier(0.34, 0.01, 0.26, 0.99);
+
+  --box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+
+  --transitiion-hover-translateY: translateY(-0.8rem);
+
+  --box-shadow-people: 0 2px 15px 0 rgba(45, 41, 38, 0.2);
+}
+
+// Include-Media breakpoints
+// ------------------
+$breakpoints: (
+  phonesmall: 20em,
+  // 414px,
+  phone: 25.875em,
+  // 768px,
+  tablet: 48em,
+  // 1024px,
+  tablet-landscape: 64em,
+  // 1366px
+  desktop: 85.375em,
+  // 1536px
+  desktophd: 96em,
+);
