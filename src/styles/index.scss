@@ -3,5 +3,14 @@
   src: url('../fonts/Inter.ttf');
 }
 
-@import 'variables';
-@import 'scaffolding';
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/helpers';
+
+@import './base/reset';
+@import './base/typography';
+
+@import './layout/navigation';
+@import './layout/grid';
+@import './layout/header';
